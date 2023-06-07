@@ -31,18 +31,17 @@ class BrowsingContext: Equatable {
     
     func createContent(andDisplay display: Bool = false) {
         if browsingWindowController == nil {
-            browsingWindowController = BrowserWindowController(browsingContext: self)
+            browsingWindowController = BrowserWindowController(withContext: self)
         }
         
-        browsingWindowController?.configureContent()
+        browsingWindowController?.configureWindow()
         
         if display {
             browsingWindowController?.window?.makeKeyAndOrderFront(nil)
         }
     }
     
-    func becomeMainContext() {
-        print("[BrowsingContext: \(uuid)] Making main")
-    }
+    // TODO: Multiple contexts corresponding to multiple windows.
+    func becomeMainContext() {}
     
 }

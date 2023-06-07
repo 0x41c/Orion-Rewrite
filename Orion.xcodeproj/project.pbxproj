@@ -8,26 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		1D409E0A2A2EC79E00E08219 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D409E092A2EC79E00E08219 /* Assets.xcassets */; };
-		1D409E1C2A2EC9C300E08219 /* BrowserWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E1B2A2EC9C300E08219 /* BrowserWindow.swift */; };
 		1D409E262A2ECDBC00E08219 /* Orion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E252A2ECDBC00E08219 /* Orion.swift */; };
 		1D409E312A2ECFB500E08219 /* BrowsingContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E302A2ECFB500E08219 /* BrowsingContext.swift */; };
-		1D409E382A2ED58A00E08219 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E372A2ED58A00E08219 /* MenuBar.swift */; };
-		1D409E412A2EE0EB00E08219 /* BrowserWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E402A2EE0EB00E08219 /* BrowserWindowController.swift */; };
-		1D409E432A2EE14300E08219 /* BrowserWindowContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E422A2EE14300E08219 /* BrowserWindowContentController.swift */; };
-		1D409E4C2A2EF5A100E08219 /* BrowserToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E4B2A2EF5A100E08219 /* BrowserToolbar.swift */; };
+		1D409E5F2A30295A00E08219 /* BrowserWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E5E2A30295A00E08219 /* BrowserWindowController.swift */; };
+		1D409E612A302A0000E08219 /* TabContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E602A302A0000E08219 /* TabContentViewController.swift */; };
+		1D409E642A302AED00E08219 /* ToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E632A302AED00E08219 /* ToolbarController.swift */; };
+		1D409E6D2A30408100E08219 /* ResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E6C2A30408100E08219 /* ResourceProvider.swift */; };
+		1D409E732A3041C800E08219 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E722A3041C800E08219 /* Logger.swift */; };
+		1D409E762A3047BE00E08219 /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E752A3047BE00E08219 /* ContentController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D409E022A2EC79C00E08219 /* Orion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D409E092A2EC79E00E08219 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D409E0E2A2EC79E00E08219 /* Orion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Orion.entitlements; sourceTree = "<group>"; };
-		1D409E1B2A2EC9C300E08219 /* BrowserWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindow.swift; sourceTree = "<group>"; };
 		1D409E252A2ECDBC00E08219 /* Orion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orion.swift; sourceTree = "<group>"; };
 		1D409E302A2ECFB500E08219 /* BrowsingContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsingContext.swift; sourceTree = "<group>"; };
-		1D409E372A2ED58A00E08219 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
-		1D409E402A2EE0EB00E08219 /* BrowserWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindowController.swift; sourceTree = "<group>"; };
-		1D409E422A2EE14300E08219 /* BrowserWindowContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindowContentController.swift; sourceTree = "<group>"; };
-		1D409E4B2A2EF5A100E08219 /* BrowserToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserToolbar.swift; sourceTree = "<group>"; };
+		1D409E5E2A30295A00E08219 /* BrowserWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindowController.swift; sourceTree = "<group>"; };
+		1D409E602A302A0000E08219 /* TabContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContentViewController.swift; sourceTree = "<group>"; };
+		1D409E632A302AED00E08219 /* ToolbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarController.swift; sourceTree = "<group>"; };
+		1D409E6C2A30408100E08219 /* ResourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceProvider.swift; sourceTree = "<group>"; };
+		1D409E722A3041C800E08219 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		1D409E752A3047BE00E08219 /* ContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +62,11 @@
 		1D409E042A2EC79C00E08219 /* Orion */ = {
 			isa = PBXGroup;
 			children = (
-				1D409E252A2ECDBC00E08219 /* Orion.swift */,
+				1D409E712A3041A300E08219 /* Core */,
 				1D409E2B2A2ECEB700E08219 /* Resources */,
-				1D409E3C2A2EDDBB00E08219 /* Preferences */,
 				1D409E142A2EC84800E08219 /* UI */,
+				1D409E302A2ECFB500E08219 /* BrowsingContext.swift */,
+				1D409E252A2ECDBC00E08219 /* Orion.swift */,
 			);
 			path = Orion;
 			sourceTree = "<group>";
@@ -71,78 +74,54 @@
 		1D409E142A2EC84800E08219 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				1D409E392A2ED5E600E08219 /* Menu */,
-				1D409E3B2A2EDB4700E08219 /* Browser */,
+				1D409E5E2A30295A00E08219 /* BrowserWindowController.swift */,
+				1D409E602A302A0000E08219 /* TabContentViewController.swift */,
+				1D409E632A302AED00E08219 /* ToolbarController.swift */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		1D409E1E2A2ECAAE00E08219 /* Toolbar */ = {
-			isa = PBXGroup;
-			children = (
-				1D409E4B2A2EF5A100E08219 /* BrowserToolbar.swift */,
-			);
-			path = Toolbar;
 			sourceTree = "<group>";
 		};
 		1D409E2B2A2ECEB700E08219 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1D409E092A2EC79E00E08219 /* Assets.xcassets */,
-				1D409E0E2A2EC79E00E08219 /* Orion.entitlements */,
+				1D409E702A3040D400E08219 /* Application */,
+				1D409E6F2A3040A200E08219 /* Bundled */,
+				1D409E6C2A30408100E08219 /* ResourceProvider.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		1D409E392A2ED5E600E08219 /* Menu */ = {
+		1D409E6F2A3040A200E08219 /* Bundled */ = {
 			isa = PBXGroup;
 			children = (
-				1D409E3A2A2ED5F100E08219 /* Items */,
-				1D409E372A2ED58A00E08219 /* MenuBar.swift */,
 			);
-			path = Menu;
+			path = Bundled;
 			sourceTree = "<group>";
 		};
-		1D409E3A2A2ED5F100E08219 /* Items */ = {
+		1D409E702A3040D400E08219 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				1D409E092A2EC79E00E08219 /* Assets.xcassets */,
+				1D409E0E2A2EC79E00E08219 /* Orion.entitlements */,
 			);
-			path = Items;
+			path = Application;
 			sourceTree = "<group>";
 		};
-		1D409E3B2A2EDB4700E08219 /* Browser */ = {
+		1D409E712A3041A300E08219 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				1D409E302A2ECFB500E08219 /* BrowsingContext.swift */,
-				1D409E402A2EE0EB00E08219 /* BrowserWindowController.swift */,
-				1D409E4A2A2EEB7C00E08219 /* Windows */,
-				1D409E3D2A2EDFC600E08219 /* Content */,
-				1D409E1E2A2ECAAE00E08219 /* Toolbar */,
+				1D409E742A3047AB00E08219 /* WebKit */,
+				1D409E722A3041C800E08219 /* Logger.swift */,
 			);
-			path = Browser;
+			path = Core;
 			sourceTree = "<group>";
 		};
-		1D409E3C2A2EDDBB00E08219 /* Preferences */ = {
+		1D409E742A3047AB00E08219 /* WebKit */ = {
 			isa = PBXGroup;
 			children = (
+				1D409E752A3047BE00E08219 /* ContentController.swift */,
 			);
-			path = Preferences;
-			sourceTree = "<group>";
-		};
-		1D409E3D2A2EDFC600E08219 /* Content */ = {
-			isa = PBXGroup;
-			children = (
-				1D409E422A2EE14300E08219 /* BrowserWindowContentController.swift */,
-			);
-			path = Content;
-			sourceTree = "<group>";
-		};
-		1D409E4A2A2EEB7C00E08219 /* Windows */ = {
-			isa = PBXGroup;
-			children = (
-				1D409E1B2A2EC9C300E08219 /* BrowserWindow.swift */,
-			);
-			path = Windows;
+			path = WebKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,12 +193,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D409E412A2EE0EB00E08219 /* BrowserWindowController.swift in Sources */,
-				1D409E432A2EE14300E08219 /* BrowserWindowContentController.swift in Sources */,
+				1D409E5F2A30295A00E08219 /* BrowserWindowController.swift in Sources */,
+				1D409E762A3047BE00E08219 /* ContentController.swift in Sources */,
 				1D409E312A2ECFB500E08219 /* BrowsingContext.swift in Sources */,
-				1D409E382A2ED58A00E08219 /* MenuBar.swift in Sources */,
-				1D409E1C2A2EC9C300E08219 /* BrowserWindow.swift in Sources */,
-				1D409E4C2A2EF5A100E08219 /* BrowserToolbar.swift in Sources */,
+				1D409E642A302AED00E08219 /* ToolbarController.swift in Sources */,
+				1D409E612A302A0000E08219 /* TabContentViewController.swift in Sources */,
+				1D409E732A3041C800E08219 /* Logger.swift in Sources */,
+				1D409E6D2A30408100E08219 /* ResourceProvider.swift in Sources */,
 				1D409E262A2ECDBC00E08219 /* Orion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +332,7 @@
 				DEVELOPMENT_TEAM = 7924VL9N7J;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = Orion.Orion;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -379,6 +360,7 @@
 				DEVELOPMENT_TEAM = 7924VL9N7J;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = Orion.Orion;
 				LD_RUNPATH_SEARCH_PATHS = (

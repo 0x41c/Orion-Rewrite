@@ -8,42 +8,34 @@
 import Foundation
 import AppKit
 
+/// Main application class, and lifecycle entrypoint
 @main
 class Orion: NSApplication {
-    
+    /// Backing store for `mainBrowsingContext`
     private var _mainContext: BrowsingContext? = nil
-    
-    var browsingContexts: [BrowsingContext]
+    /// Simply the main browsing context. Setting this value triggers
+    /// a lifecycle update on the new context.
     var mainBrowsingContext: BrowsingContext? {
         get { _mainContext }
         set {
-            if newValue != nil && !browsingContexts.contains(newValue!) {
-                browsingContexts.append(newValue!)
-            }
             _mainContext = newValue
             _mainContext?.becomeMainContext()
         }
     }
-    
-    override init() {
-        browsingContexts = [BrowsingContext]()
-        super.init()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func createContext(for browsingMode: BrowsingMode, displayWindow: Bool = false) {
+    /// Instantiates a new `BrowsingContext`, configures, and displays it.
+    func createContext(for browsingMode: BrowsingMode, displayWindow: Bool = false) -> BrowsingContext {
         let context = BrowsingContext(mode: browsingMode)
         context.createContent(andDisplay: displayWindow)
+        return context
     }
     
     override func finishLaunching() {
         super.finishLaunching()
-        createContext(for: .publicBrowsing, displayWindow: true)
+        let context = createContext(for: .publicBrowsing, displayWindow: true)
+        mainBrowsingContext = context
     }
     
+    /// The application entrypoint which is delegated to `NSApplicationMain` to initialize this class.
     static func main() {
         _ = NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv)
     }
