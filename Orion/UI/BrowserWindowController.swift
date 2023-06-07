@@ -13,25 +13,37 @@ class BrowserWindowController: NSWindowController {
     /// Smallest the window should ever go, which is why this is static.
     /// As with the last project, this is also taken from safari.
     static var minimumWindowSize: NSSize {
-        NSSize(width: 575, height: 700)
+        NSSize(width: 575, height: 200)
     }
-    /// Context associated with this browsing session. Dictates certain
-    /// window/sub-controller behaviours, such as history recognition (not implemented).
-    weak var browsingContext: BrowsingContext?
+    /// Default content size. Don't need anything fancy here
+    static var launchWindowFrame: NSRect {
+        NSRect(origin: .zero, size: NSSize(
+            width: 1000,
+            height: 600
+        ))
+    }
+    /// Context associated with this browsing session. Dictates certain window/sub-controller
+    /// behaviours, such as history recognition (not implemented).
+    weak var browsingContext: BrowserSessionContext?
+    /// Content controller hosting a webview and supporting API's
     var tabContentController: TabContentViewController
+    var toolbarController: ToolbarController
     
-    init(withContext context: BrowsingContext) {
+    init(withContext context: BrowserSessionContext) {
+        let window = NSWindow()
         browsingContext = context
         tabContentController = TabContentViewController(withContext: context)
-        super.init(window: nil)
+        toolbarController = ToolbarController()
+        super.init(window: window)
+        contentViewController = tabContentController
     }
     
     required init(coder: NSCoder?) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    /// Does basic window configuration and makes the window presentable.
-    /// Additionally ensures tab content has been created.
+    /// Does basic window configuration and makes the window presentable. Additionally ensures
+    /// tab and toolbar content have been instantiated and configured.
     func configureWindow() {
         window?.minSize = BrowserWindowController.minimumWindowSize
         window?.styleMask.insert([
@@ -39,8 +51,12 @@ class BrowserWindowController: NSWindowController {
             .fullSizeContentView
         ])
         window?.titleVisibility = .hidden
-        window?.titlebarAppearsTransparent = true
-        contentViewController = tabContentController
+        toolbarController.configureToolbar(inWindow: window)
+        window?.setFrame(
+            BrowserWindowController.launchWindowFrame,
+            display: true
+        )
+        window?.center()
     }
     
 }

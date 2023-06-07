@@ -12,19 +12,19 @@ import AppKit
 @main
 class Orion: NSApplication {
     /// Backing store for `mainBrowsingContext`
-    private var _mainContext: BrowsingContext? = nil
+    private var _mainContext: BrowserSessionContext? = nil
     /// Simply the main browsing context. Setting this value triggers
     /// a lifecycle update on the new context.
-    var mainBrowsingContext: BrowsingContext? {
+    var mainBrowsingContext: BrowserSessionContext? {
         get { _mainContext }
         set {
             _mainContext = newValue
             _mainContext?.becomeMainContext()
         }
     }
-    /// Instantiates a new `BrowsingContext`, configures, and displays it.
-    func createContext(for browsingMode: BrowsingMode, displayWindow: Bool = false) -> BrowsingContext {
-        let context = BrowsingContext(mode: browsingMode)
+    /// Instantiates a new `BrowserSessionContext`, configures, and displays it.
+    func createContext(for browsingMode: BrowsingMode, displayWindow: Bool = false) -> BrowserSessionContext {
+        let context = BrowserSessionContext(mode: browsingMode)
         context.createContent(andDisplay: displayWindow)
         return context
     }

@@ -3,4 +3,29 @@
    uuid = "400468C1-09DC-4372-A6D9-A62E2993A3A2"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "63E25C43-3AE7-4B6D-997C-E7ECA774D662"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "NSToolbarError"
+            moduleName = "">
+            <Locations>
+               <Location
+                  uuid = "63E25C43-3AE7-4B6D-997C-E7ECA774D662 - 19bb95dec4f4c983"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSToolbarError"
+                  moduleName = "AppKit"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
