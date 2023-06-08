@@ -15,27 +15,19 @@ class BrowserWindowController: NSWindowController {
     static var minimumWindowSize: NSSize {
         NSSize(width: 575, height: 200)
     }
-    /// Default content size. Don't need anything fancy here
+    /// Default content size. Don't need anything fancy here.
     static var launchWindowFrame: NSRect {
         NSRect(origin: .zero, size: NSSize(
-            width: 1000,
-            height: 600
+            width: 1350,
+            height: 780
         ))
     }
-    /// Context associated with this browsing session. Dictates certain window/sub-controller
-    /// behaviours, such as history recognition (not implemented).
-    weak var browsingContext: BrowserSessionContext?
-    /// Content controller hosting a webview and supporting API's
-    var tabContentController: TabContentViewController
-    var toolbarController: ToolbarController
+    /// Context associated with this browsing session.
+    weak var sessionContext: BrowserSessionContext?
     
     init(withContext context: BrowserSessionContext) {
-        let window = NSWindow()
-        browsingContext = context
-        tabContentController = TabContentViewController(withContext: context)
-        toolbarController = ToolbarController()
-        super.init(window: window)
-        contentViewController = tabContentController
+        sessionContext = context
+        super.init(window: NSWindow())
     }
     
     required init(coder: NSCoder?) {
@@ -46,16 +38,12 @@ class BrowserWindowController: NSWindowController {
     /// tab and toolbar content have been instantiated and configured.
     func configureWindow() {
         window?.minSize = BrowserWindowController.minimumWindowSize
+        window?.setFrame(BrowserWindowController.launchWindowFrame, display: true)
         window?.styleMask.insert([
             .closable, .miniaturizable, .resizable,
             .fullSizeContentView
         ])
         window?.titleVisibility = .hidden
-        toolbarController.configureToolbar(inWindow: window)
-        window?.setFrame(
-            BrowserWindowController.launchWindowFrame,
-            display: true
-        )
         window?.center()
     }
     

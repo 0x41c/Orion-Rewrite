@@ -12,18 +12,32 @@ import AppKit
 /// coordinate messages and update events from the window to the
 /// tab items and likewise.
 class ToolbarController: NSObject, NSToolbarDelegate {
+    /// Browsing context for this toolbar.
+    weak var sessionContext: BrowserSessionContext?
     /// The managed reference to the toolbar.
     var toolbar: NSToolbar
+    /// The tab bar item.
+    var tabBarController: UnifiedTabBarController?
+    
+    lazy var itemControllers: [ToolbarItemController] = {
+       return [
+            BackForwardItemController(withToolbarController: self),
+            UnifiedTabBarController(withToolbarController: self)
+        ]
+    }()
+    
     /// A list of item identifiers to display in the toolbar
     var toolbarItemIdentifiers: [NSToolbarItem.Identifier] {
-        []
+        itemControllers.map { controller in
+            controller.itemIdentifier
+        }
     }
     /// A list if item identifiers to display in the default group
     var defaultItemIdentifiers: [NSToolbarItem.Identifier] {
-        []
+        toolbarItemIdentifiers
     }
     
-    override init() {
+    init(withContext context: BrowserSessionContext) {
         toolbar = NSToolbar(identifier: "Orion Toolbar")
         super.init()
     }
@@ -33,8 +47,6 @@ class ToolbarController: NSObject, NSToolbarDelegate {
         window?.toolbar = toolbar
         if #available(macOS 11, *) {
             window?.toolbarStyle = .unified
-        } else {
-            window?.toolbarStyle = .automatic
         }
         toolbar.delegate = self
         toolbar.allowsUserCustomization = true

@@ -24,6 +24,4 @@ struct ResourceProvider {
         
         return try String(contentsOfFile: resourcePath)
     }
-    
-    
 }
