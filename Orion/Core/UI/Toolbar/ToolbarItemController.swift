@@ -11,8 +11,10 @@ import AppKit
 /// A utility-ish protocol to simplify delegation of toolbar item creation. Encourages the caching
 /// of items for state responsiveness.
 protocol ToolbarItemController: NSObject {
-    /// A reference to the parent toolbar controller. Useful for accessing browsing context.
+    /// A reference to the parent toolbar controller.
     var parentToolbarController: ToolbarController? { get }
+    /// A reference to the session context.
+    var sessionContext: BrowserSessionContext? { get }
     /// A static identifier for the managed item
     var itemIdentifier: NSToolbarItem.Identifier { get }
     /// An optional item used for display in the customization sheet.
@@ -26,4 +28,10 @@ protocol ToolbarItemController: NSObject {
     func configureItems()
     /// Creates an instance conforming to `ToolbarItemController`
     init(withToolbarController controller: ToolbarController?)
+}
+
+extension ToolbarItemController {
+    var sessionContext: BrowserSessionContext? {
+        parentToolbarController?.sessionContext
+    }
 }

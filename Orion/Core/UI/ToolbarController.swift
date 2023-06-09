@@ -18,13 +18,21 @@ class ToolbarController: NSObject, NSToolbarDelegate {
     var toolbar: NSToolbar
     /// The tab bar item.
     var tabBarController: UnifiedTabBarController?
-    
+    /// The back and forward buttons.
+    var backForwardController: BackForwardItemController?
+    /// A list of all the toolbar items; Lazily initializes them.
     lazy var itemControllers: [ToolbarItemController] = {
+        backForwardController = BackForwardItemController(withToolbarController: self)
+        tabBarController = UnifiedTabBarController(withToolbarController: self)
        return [
-            BackForwardItemController(withToolbarController: self),
-            UnifiedTabBarController(withToolbarController: self)
+            backForwardController!,
+            tabBarController!
         ]
     }()
+    /// A map of the items to their identifiers. Useful for later retrieval.
+    var toolbarItemMap: [NSToolbarItem.Identifier:ToolbarItemController] {
+        .init(uniqueKeysWithValues: zip(itemControllers.map({ $0.itemIdentifier }), itemControllers))
+    }
     
     /// A list of item identifiers to display in the toolbar
     var toolbarItemIdentifiers: [NSToolbarItem.Identifier] {
@@ -38,11 +46,13 @@ class ToolbarController: NSObject, NSToolbarDelegate {
     }
     
     init(withContext context: BrowserSessionContext) {
+        sessionContext = context
         toolbar = NSToolbar(identifier: "Orion Toolbar")
         super.init()
     }
     
-    /// Configures the toolbar and assigns it to the window.
+    /// Configures the toolbar and assigns it to the window. Ensures all items have been
+    /// configured.
     func configureToolbar(inWindow window: NSWindow?) {
         window?.toolbar = toolbar
         if #available(macOS 11, *) {
@@ -52,6 +62,7 @@ class ToolbarController: NSObject, NSToolbarDelegate {
         toolbar.allowsUserCustomization = true
         toolbar.autosavesConfiguration = true
         toolbar.displayMode = .iconOnly
+        itemControllers.forEach { $0.configureItems() }
     }
     
     // MARK: - NSToolbarDelegate
@@ -70,7 +81,11 @@ class ToolbarController: NSObject, NSToolbarDelegate {
     
     func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier,
                  willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
-        return nil
+        let item = toolbarItemMap[itemIdentifier]
+        if flag {
+            return item?.activeItem
+        }
+        return item?.displayItem
     }
     
 }

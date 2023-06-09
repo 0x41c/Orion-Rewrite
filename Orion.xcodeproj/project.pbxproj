@@ -19,6 +19,9 @@
 		1D409E7E2A310C0E00E08219 /* UnifiedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E7D2A310C0E00E08219 /* UnifiedTabBarController.swift */; };
 		1D409E812A311DF600E08219 /* TabContentContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E802A311DF600E08219 /* TabContentContext.swift */; };
 		1D409E852A3120EE00E08219 /* BackForwardItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E842A3120EE00E08219 /* BackForwardItemController.swift */; };
+		1D409E882A317A3E00E08219 /* UnifiedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E872A317A3E00E08219 /* UnifiedTabBar.swift */; };
+		1D409E8A2A31834D00E08219 /* InvisibleScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E892A31834D00E08219 /* InvisibleScroller.swift */; };
+		1D409E8C2A3250EA00E08219 /* OpenCloseTabItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E8B2A3250EA00E08219 /* OpenCloseTabItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		1D409E7D2A310C0E00E08219 /* UnifiedTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedTabBarController.swift; sourceTree = "<group>"; };
 		1D409E802A311DF600E08219 /* TabContentContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContentContext.swift; sourceTree = "<group>"; };
 		1D409E842A3120EE00E08219 /* BackForwardItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackForwardItemController.swift; sourceTree = "<group>"; };
+		1D409E872A317A3E00E08219 /* UnifiedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedTabBar.swift; sourceTree = "<group>"; };
+		1D409E892A31834D00E08219 /* InvisibleScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleScroller.swift; sourceTree = "<group>"; };
+		1D409E8B2A3250EA00E08219 /* OpenCloseTabItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCloseTabItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				1D409E7D2A310C0E00E08219 /* UnifiedTabBarController.swift */,
+				1D409E872A317A3E00E08219 /* UnifiedTabBar.swift */,
+				1D409E892A31834D00E08219 /* InvisibleScroller.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				1D409E842A3120EE00E08219 /* BackForwardItemController.swift */,
+				1D409E8B2A3250EA00E08219 /* OpenCloseTabItemController.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -228,8 +237,11 @@
 			files = (
 				1D409E812A311DF600E08219 /* TabContentContext.swift in Sources */,
 				1D409E5F2A30295A00E08219 /* BrowserWindowController.swift in Sources */,
+				1D409E8A2A31834D00E08219 /* InvisibleScroller.swift in Sources */,
+				1D409E882A317A3E00E08219 /* UnifiedTabBar.swift in Sources */,
 				1D409E852A3120EE00E08219 /* BackForwardItemController.swift in Sources */,
 				1D409E312A2ECFB500E08219 /* BrowserSessionContext.swift in Sources */,
+				1D409E8C2A3250EA00E08219 /* OpenCloseTabItemController.swift in Sources */,
 				1D409E642A302AED00E08219 /* ToolbarController.swift in Sources */,
 				1D409E7C2A310A0000E08219 /* ToolbarItemController.swift in Sources */,
 				1D409E612A302A0000E08219 /* TabContentViewController.swift in Sources */,
