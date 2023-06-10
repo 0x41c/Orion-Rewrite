@@ -26,5 +26,4 @@ struct Logger {
         log(message, level: "ERROR", callingFunction: function)
         fatalError("Uh oh, stinky...")
     }
-    
 }

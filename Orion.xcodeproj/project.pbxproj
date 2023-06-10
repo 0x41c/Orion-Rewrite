@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D409E0A2A2EC79E00E08219 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D409E092A2EC79E00E08219 /* Assets.xcassets */; };
 		1D409E262A2ECDBC00E08219 /* Orion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E252A2ECDBC00E08219 /* Orion.swift */; };
-		1D409E312A2ECFB500E08219 /* BrowserSessionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E302A2ECFB500E08219 /* BrowserSessionContext.swift */; };
+		1D409E312A2ECFB500E08219 /* BrowserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E302A2ECFB500E08219 /* BrowserSession.swift */; };
 		1D409E5F2A30295A00E08219 /* BrowserWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E5E2A30295A00E08219 /* BrowserWindowController.swift */; };
 		1D409E612A302A0000E08219 /* TabContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E602A302A0000E08219 /* TabContentViewController.swift */; };
 		1D409E642A302AED00E08219 /* ToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E632A302AED00E08219 /* ToolbarController.swift */; };
@@ -17,11 +17,15 @@
 		1D409E732A3041C800E08219 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E722A3041C800E08219 /* Logger.swift */; };
 		1D409E7C2A310A0000E08219 /* ToolbarItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E7B2A310A0000E08219 /* ToolbarItemController.swift */; };
 		1D409E7E2A310C0E00E08219 /* UnifiedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E7D2A310C0E00E08219 /* UnifiedTabBarController.swift */; };
-		1D409E812A311DF600E08219 /* TabContentContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E802A311DF600E08219 /* TabContentContext.swift */; };
+		1D409E812A311DF600E08219 /* TabSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E802A311DF600E08219 /* TabSession.swift */; };
 		1D409E852A3120EE00E08219 /* BackForwardItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E842A3120EE00E08219 /* BackForwardItemController.swift */; };
 		1D409E882A317A3E00E08219 /* UnifiedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E872A317A3E00E08219 /* UnifiedTabBar.swift */; };
 		1D409E8A2A31834D00E08219 /* InvisibleScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E892A31834D00E08219 /* InvisibleScroller.swift */; };
 		1D409E8C2A3250EA00E08219 /* OpenCloseTabItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E8B2A3250EA00E08219 /* OpenCloseTabItemController.swift */; };
+		1D409E8E2A32B2B300E08219 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D409E8D2A32B2B300E08219 /* Observable.swift */; };
+		1D5899932A33889700261A0D /* WebUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5899922A33889700261A0D /* WebUIController.swift */; };
+		1D5899952A33891200261A0D /* BrowserNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5899942A33891200261A0D /* BrowserNavigationController.swift */; };
+		1D5899992A342A4F00261A0D /* RefreshItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5899982A342A4F00261A0D /* RefreshItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +33,7 @@
 		1D409E092A2EC79E00E08219 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D409E0E2A2EC79E00E08219 /* Orion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Orion.entitlements; sourceTree = "<group>"; };
 		1D409E252A2ECDBC00E08219 /* Orion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orion.swift; sourceTree = "<group>"; };
-		1D409E302A2ECFB500E08219 /* BrowserSessionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserSessionContext.swift; sourceTree = "<group>"; };
+		1D409E302A2ECFB500E08219 /* BrowserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserSession.swift; sourceTree = "<group>"; };
 		1D409E5E2A30295A00E08219 /* BrowserWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindowController.swift; sourceTree = "<group>"; };
 		1D409E602A302A0000E08219 /* TabContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContentViewController.swift; sourceTree = "<group>"; };
 		1D409E632A302AED00E08219 /* ToolbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarController.swift; sourceTree = "<group>"; };
@@ -37,11 +41,16 @@
 		1D409E722A3041C800E08219 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1D409E7B2A310A0000E08219 /* ToolbarItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarItemController.swift; sourceTree = "<group>"; };
 		1D409E7D2A310C0E00E08219 /* UnifiedTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedTabBarController.swift; sourceTree = "<group>"; };
-		1D409E802A311DF600E08219 /* TabContentContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContentContext.swift; sourceTree = "<group>"; };
+		1D409E802A311DF600E08219 /* TabSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSession.swift; sourceTree = "<group>"; };
 		1D409E842A3120EE00E08219 /* BackForwardItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackForwardItemController.swift; sourceTree = "<group>"; };
 		1D409E872A317A3E00E08219 /* UnifiedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedTabBar.swift; sourceTree = "<group>"; };
 		1D409E892A31834D00E08219 /* InvisibleScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleScroller.swift; sourceTree = "<group>"; };
 		1D409E8B2A3250EA00E08219 /* OpenCloseTabItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCloseTabItemController.swift; sourceTree = "<group>"; };
+		1D409E8D2A32B2B300E08219 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		1D5899922A33889700261A0D /* WebUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebUIController.swift; sourceTree = "<group>"; };
+		1D5899942A33891200261A0D /* BrowserNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserNavigationController.swift; sourceTree = "<group>"; };
+		1D5899972A33CF8400261A0D /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		1D5899982A342A4F00261A0D /* RefreshItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 		1D409DF92A2EC79C00E08219 = {
 			isa = PBXGroup;
 			children = (
+				1D5899972A33CF8400261A0D /* .swiftlint.yml */,
 				1D409E042A2EC79C00E08219 /* Orion */,
 				1D409E032A2EC79C00E08219 /* Products */,
 			);
@@ -87,6 +97,7 @@
 				1D409E632A302AED00E08219 /* ToolbarController.swift */,
 				1D409E5E2A30295A00E08219 /* BrowserWindowController.swift */,
 				1D409E602A302A0000E08219 /* TabContentViewController.swift */,
+				1D5899922A33889700261A0D /* WebUIController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -120,10 +131,11 @@
 		1D409E712A3041A300E08219 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				1D409E782A31079500E08219 /* Utility */,
 				1D409E142A2EC84800E08219 /* UI */,
-				1D409E302A2ECFB500E08219 /* BrowserSessionContext.swift */,
-				1D409E802A311DF600E08219 /* TabContentContext.swift */,
+				1D5899912A33880F00261A0D /* WebKit */,
+				1D409E782A31079500E08219 /* Utility */,
+				1D409E302A2ECFB500E08219 /* BrowserSession.swift */,
+				1D409E802A311DF600E08219 /* TabSession.swift */,
 				1D409E252A2ECDBC00E08219 /* Orion.swift */,
 			);
 			path = Core;
@@ -133,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				1D409E722A3041C800E08219 /* Logger.swift */,
+				1D409E8D2A32B2B300E08219 /* Observable.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -162,8 +175,17 @@
 			children = (
 				1D409E842A3120EE00E08219 /* BackForwardItemController.swift */,
 				1D409E8B2A3250EA00E08219 /* OpenCloseTabItemController.swift */,
+				1D5899982A342A4F00261A0D /* RefreshItemController.swift */,
 			);
 			path = Items;
+			sourceTree = "<group>";
+		};
+		1D5899912A33880F00261A0D /* WebKit */ = {
+			isa = PBXGroup;
+			children = (
+				1D5899942A33891200261A0D /* BrowserNavigationController.swift */,
+			);
+			path = WebKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,8 +202,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				1D5899902A32B8FE00261A0D /* PBXTargetDependency */,
 			);
 			name = Orion;
+			packageProductDependencies = (
+			);
 			productName = Orion;
 			productReference = 1D409E022A2EC79C00E08219 /* Orion.app */;
 			productType = "com.apple.product-type.application";
@@ -210,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 1D409DF92A2EC79C00E08219;
+			packageReferences = (
+				1D409E8F2A32B88500E08219 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = 1D409E032A2EC79C00E08219 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,16 +263,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D409E812A311DF600E08219 /* TabContentContext.swift in Sources */,
+				1D409E8E2A32B2B300E08219 /* Observable.swift in Sources */,
+				1D409E812A311DF600E08219 /* TabSession.swift in Sources */,
 				1D409E5F2A30295A00E08219 /* BrowserWindowController.swift in Sources */,
 				1D409E8A2A31834D00E08219 /* InvisibleScroller.swift in Sources */,
 				1D409E882A317A3E00E08219 /* UnifiedTabBar.swift in Sources */,
 				1D409E852A3120EE00E08219 /* BackForwardItemController.swift in Sources */,
-				1D409E312A2ECFB500E08219 /* BrowserSessionContext.swift in Sources */,
+				1D409E312A2ECFB500E08219 /* BrowserSession.swift in Sources */,
 				1D409E8C2A3250EA00E08219 /* OpenCloseTabItemController.swift in Sources */,
 				1D409E642A302AED00E08219 /* ToolbarController.swift in Sources */,
 				1D409E7C2A310A0000E08219 /* ToolbarItemController.swift in Sources */,
 				1D409E612A302A0000E08219 /* TabContentViewController.swift in Sources */,
+				1D5899992A342A4F00261A0D /* RefreshItemController.swift in Sources */,
+				1D5899952A33891200261A0D /* BrowserNavigationController.swift in Sources */,
+				1D5899932A33889700261A0D /* WebUIController.swift in Sources */,
 				1D409E7E2A310C0E00E08219 /* UnifiedTabBarController.swift in Sources */,
 				1D409E732A3041C800E08219 /* Logger.swift in Sources */,
 				1D409E6D2A30408100E08219 /* ResourceProvider.swift in Sources */,
@@ -253,6 +285,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D5899902A32B8FE00261A0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 1D58998F2A32B8FE00261A0D /* SwiftLintPlugin */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D409E0F2A2EC79E00E08219 /* Debug */ = {
@@ -448,6 +487,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1D409E8F2A32B88500E08219 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.52.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1D58998F2A32B8FE00261A0D /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D409E8F2A32B88500E08219 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D409DFA2A2EC79C00E08219 /* Project object */;
 }

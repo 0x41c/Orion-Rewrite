@@ -14,24 +14,36 @@ class UnifiedTabBar: NSView {
     weak var toolbarController: ToolbarController?
     /// The scroll view required for tab overflow/transitions.
     var scrollView: NSScrollView = NSScrollView()
-    
-    
+
     init(withToolbarController toolbar: ToolbarController?) {
         toolbarController = toolbar
         super.init(frame: .zero)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    /// Handles main configuration of the view and it's scrolling properties
-    func configureTabs() {
-        // Start with the scroll view
+
+        // Constraints taken from safari.
+        let views = ["UnifiedTabBar": self]
+        var constraints: [NSLayoutConstraint] = []
+
+        constraints += NSLayoutConstraint.constraints(
+            withVisualFormat: "H:[UnifiedTabBar(>=320,<=10000)]",
+            metrics: nil,
+            views: views
+        )
+        constraints += NSLayoutConstraint.constraints(
+            withVisualFormat: "V:[UnifiedTabBar(28)]",
+            metrics: nil,
+            views: views
+        )
+
         scrollView.hasHorizontalScroller = true
         scrollView.horizontalScroller = InvisibleScroller()
         scrollView.autohidesScrollers = false
+
+        addSubview(scrollView)
+
+        NSLayoutConstraint.activate(constraints)
     }
-    
-    
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

@@ -14,6 +14,6 @@ class InvisibleScroller: NSScroller {
         for controlSize: NSControl.ControlSize,
         scrollerStyle: NSScroller.Style
     ) -> CGFloat {
-        return 0.0
+        0.0
     }
 }

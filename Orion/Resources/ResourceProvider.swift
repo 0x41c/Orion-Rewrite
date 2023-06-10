@@ -15,13 +15,13 @@ struct ResourceProvider {
     static func retrieveResourcePath(forFileNamed fileName: String, type: String) -> String? {
         ResourceProvider.defaultBundle.path(forResource: fileName, ofType: type)
     }
-    
+
     /// Ensures that a resource exists; Returns the content of a found resource.
     static func getJavaScriptResource(named fileName: String) throws -> String {
         guard let resourcePath = retrieveResourcePath(forFileNamed: fileName, type: "js") else {
             Logger.error("Unable to retrieve required javascript file \"\(fileName)\"")
         }
-        
+
         return try String(contentsOfFile: resourcePath)
     }
 }

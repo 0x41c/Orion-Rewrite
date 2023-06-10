@@ -14,45 +14,44 @@ class UnifiedTabBarController: NSObject, ToolbarItemController {
     var itemIdentifier: NSToolbarItem.Identifier = .init("UnifiedTabBar")
     var displayItem: NSToolbarItem?
     var activeItem: NSToolbarItem?
-    
+
     /// The tab bar this class controls
     var unifiedTabBar: UnifiedTabBar?
-    
-    func configureItems() {
+
+    required init(withToolbarController controller: ToolbarController?) {
+        parentToolbarController = controller
+        super.init()
         configureDisplayItem()
         activeItem = NSToolbarItem(itemIdentifier: itemIdentifier)
         unifiedTabBar = UnifiedTabBar(withToolbarController: parentToolbarController)
-        unifiedTabBar?.configureTabs()
         activeItem?.view = unifiedTabBar
     }
-    
+
     func configureDisplayItem() {
         displayItem = NSToolbarItem(itemIdentifier: itemIdentifier)
         displayItem?.paletteLabel = "Address, Search, and Tabs"
-        
+
+        let addressViewFontSize = 16.0
+        let tabViewFontSize = 17.0
         let addressViewIcon = NSTextField(labelWithString: "􀆪")
         let addressViewText = NSTextField(labelWithString: "Search or enter website name")
         let tabViewIcon = NSTextField(labelWithString: "")
         let tabViewText = NSTextField(labelWithString: "Apple")
-        
+
         let addressView = NSStackView(views: [addressViewIcon, addressViewText])
         let tabView = NSStackView(views: [tabViewIcon, tabViewText])
-        
-        addressViewIcon.font = .systemFont(ofSize: 16, weight: .ultraLight)
+
+        addressViewIcon.font = .systemFont(ofSize: addressViewFontSize, weight: .ultraLight)
         addressViewIcon.textColor = .secondaryLabelColor
-        tabViewIcon.font = .systemFont(ofSize: 17)
+        tabViewIcon.font = .systemFont(ofSize: tabViewFontSize)
         tabViewIcon.textColor = .secondaryLabelColor
-        
-        let displayView = NSStackView(views: [addressView, tabView])
-        
-        // NOTE: Apple does this differently; I'm sure they containerize the items
+
+        // NOTE: Apple does this differently; I'm sure they containerize two items
         // to allow them to take up the same amount of space.
+        // swiftlint:disable:next no_magic_numbers
+        let displayView = NSStackView(views: [addressView, tabView, NSView()])
         displayView.spacing = 60
-        
+
         displayItem?.view = displayView
-    }
-    
-    required init(withToolbarController controller: ToolbarController?) {
-      parentToolbarController = controller
     }
 }

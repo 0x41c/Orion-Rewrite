@@ -1,0 +1,19 @@
+opt_in_rules:
+    - missing_docs
+    - fatal_error_message
+    - implicit_return
+    - force_unwrapping
+    - implicitly_unwrapped_optional
+    - let_var_whitespace
+    - multiline_arguments
+    - nimble_operator
+    - no_magic_numbers
+    - no_grouping_extension
+    - prefer_nimble
+    - vertical_parameter_alignment_on_call
+    - vertical_whitespace_closing_braces
+    - vertical_whitespace_opening_braces
+    - yoda_condition
+
+analyzer_rules:
+    - capture_variable
